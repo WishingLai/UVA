@@ -1,0 +1,40 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+	int in = 0;     //Input
+	int all = 0;    //Sum
+	int E = 0;	//empty bottle
+	
+	while(cin>>in) //¿é¤J
+	{
+		
+		while(in + E > 2)
+		{
+			all = all + in;
+		
+			E = E + in;
+			
+			in = E/3;
+		
+			E = E%3;
+		}
+
+		all = all + in;   //last glass of cola
+	
+		if(in + E == 2)   //borrow an empty glass
+			all ++;
+		
+
+		cout<<all<<endl;
+		
+		all = 0;
+		E = 0;
+	}
+	
+
+	system("pause");
+	return 0;
+}

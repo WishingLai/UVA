@@ -1,0 +1,66 @@
+import java.math.BigInteger;//處理大數字
+import java.util.*;
+//UVA_100
+public class Main {
+	
+	public static void main(String[] args)
+	{
+		Scanner a1 = new Scanner(System.in);
+		while(a1.hasNext())
+		{
+			long A = a1.nextInt();
+			long B = a1.nextInt();
+			long max = 0L;			//Max cycle
+			
+			if(A>B)
+			{
+				long start = B;
+				long times = A - B + 1;
+				for(long times1 = times; times1>0; times1--)
+				{
+					if(max<algo(start))
+						max = algo(start);
+					start++;
+				}
+			}
+			
+			else
+			{
+				long start = A;
+				long times = B - A + 1;
+				for(long times1 = times; times1>0; times1--)
+				{
+					if(max<algo(start))
+						max = algo(start);
+					start++;
+				}
+			}
+			
+		
+			System.out.println(A +" " +  B + " " + max);
+		}
+
+	}	
+	
+	
+	public static long algo(long A) 
+	{
+		long length = 1L;
+		
+		while(A!=1)
+		{
+			if(A %2==1)
+			{
+				length ++;
+				A = A*3 + 1;
+			}
+			else if(A %2==0)
+			{	
+				length ++;
+				A = A/2;
+			}			
+		}
+	return length;
+			
+	}
+}

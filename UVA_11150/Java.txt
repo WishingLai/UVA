@@ -1,0 +1,41 @@
+import java.util.Scanner;
+//UVA 11150
+public class Main {
+	 public static void main(String args[])
+	 {
+		 Scanner In = new Scanner(System.in);
+		 
+		 while(In.hasNext()) //Still has input
+		 {
+			 int inital = In.nextInt();
+			 
+			 int Empty = 0;
+			 
+			 int Sum = 0;
+			 
+			 while(inital + Empty >2)
+			 {
+				 Sum = Sum + inital;
+				 
+				 Empty = Empty + inital;
+				 
+				 inital = Empty/3;
+				 
+				 Empty = Empty%3;
+				 
+			 }
+			 
+			 
+			 Sum = Sum + inital;
+			 
+			 if(inital + Empty ==2)
+				 Sum ++;
+			 
+			 System.out.println(Sum);
+		 }
+		 
+		 In.close();
+		 
+	 }
+	
+}
