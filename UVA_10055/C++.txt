@@ -1,0 +1,19 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+	long int a1,a2;
+
+	while(cin>>a1)
+	{
+		cin>>a2;
+	
+		cout<<abs(a1-a2)<<endl;
+	
+	
+	}
+
+return 0;
+}

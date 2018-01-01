@@ -1,0 +1,19 @@
+import java.util.*;
+
+public class UVA_10055 {
+	public static void main(String args[])
+	{
+		long a1;
+		long a2;
+		Scanner sc = new Scanner(System.in);
+		
+		while(sc.hasNext())
+		{
+			a1 = sc.nextLong();
+			a2 = sc.nextLong();
+			
+			System.out.println(Math.abs(a1-a2));
+			
+		}
+	}
+}
